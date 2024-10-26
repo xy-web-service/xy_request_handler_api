@@ -1,12 +1,12 @@
 # -*- coding: UTF-8 -*-
-__author__ = "helios"
+__author__ = "余洋"
 __doc__ = "该类作为接口基类"
 """
   * @File    :   Api.py
   * @Time    :   2023/04/29 19:16:03
-  * @Author  :   helios
+  * @Author  :   余洋
   * @Version :   1.0
-  * @Contact :   yuyang.0515@qq.com
+  * @Contact :   yuyangit.0515@qq.com
   * @License :   (C)Copyright 2019-2023, Ship of Ocean
   * @Desc    :   该类作为接口基类
 """
