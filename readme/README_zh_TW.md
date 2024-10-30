@@ -31,6 +31,7 @@ pip install xy_request_handler_api
 ## 使用
 
 > 詳情請查看 [Demoes.py](./samples/xy_web_server_demo/source/Runner/RequestHandlerDemo/Demoes.py)
+
 ```python
 # Demoes.py
 
@@ -45,6 +46,9 @@ class Demo(Api):
 
 ##### 1. 运行 [样例工程](../samples/xy_web_server_demo)
 
+> 範例工程具體使用方式請移步 <b style="color: blue">xy_web_server.git</b> 以下倉庫
+> - <a href="https://github.com/xy-web-service/xy_web_server.git" target="_blank">Github位址</a>  
+> - <a href="https://gitee.com/xy-web-service/xy_web_server.git" target="_blank">Gitee位址</a>
 
 ```bash
 # bash
