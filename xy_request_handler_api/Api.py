@@ -12,8 +12,7 @@ __doc__ = "该类作为接口基类"
 """
 
 import json
-from xy_type.Type import is_kind_of_type
-from xy_string.String import is_empty_string
+from xy_string.utils import is_empty_string
 from xy_request_handler_base.Base import Base
 
 
@@ -40,7 +39,7 @@ class Api(Base):
 
     @code.setter
     def code(self, value):
-        if is_kind_of_type(value, type(self.__code)):
+        if isinstance(value, type(self.__code)):
             return
         self.__code = value
 
@@ -50,7 +49,7 @@ class Api(Base):
 
     @message.setter
     def message(self, value):
-        if is_kind_of_type(value, type(self.__message)):
+        if isinstance(value, type(self.__message)):
             return
         self.__message = value
 

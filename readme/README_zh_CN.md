@@ -15,7 +15,7 @@
 
 ## 说明
 
-xy-web-service服务设置模块.
+基于xy_request_handler_base的web请求基类，封装了常用功能，方便快速开发.
 
 ## 源码仓库
 
@@ -31,17 +31,50 @@ pip install xy_request_handler_api
 
 ## 使用
 
+> 详情请查看 [Demoes.py](./samples/xy_web_server_demo/source/Runner/RequestHandlerDemo/Demoes.py)
+```python
+# Demoes.py
+
+from xy_request_handler_api.Api import Api
+
+class Demo(Api):
+
+    def get(self):
+        self.write("Hello, xy_request_handler_api !")
+
+```
+
+##### 1. 运行 [样例工程](../samples/xy_web_server_demo)
+
+
 ```bash
 # bash
-xy_request_handler_api -c project -n xy_request_handler_api_demo
-# 创建项目 [ xy_request_handler_api_demo ] 成功!!!
-# 项目路径 ==>>> /mnt/bs-media/Workspace/project/opensource/xy-web-service/xy_request_handler_api/test/xy_request_handler_api_demo
 
-cd xy_request_handler_api_demo
-xy_request_handler_api
-# >>>>>>>>>>>> xy_request_handler_api - v1.0.1 <<<<<<<<<<<<<
-#
-# Hello World!!!
+# 当前目录为xy_request_handler_api的git本地仓库所在目录
+# 切换到工程目录
+cd ./samples/xy_web_server_demo
+
+# 启动样例工程的Tornado服务
+xy_web_server -w tornado start
+
+# 默认启动的Tornado服务url地址是: http://127.0.0.1:8400
+# 浏览器打开访问 http://127.0.0.1:8400/demo 进行验证
+```
+
+##### 2. 检验接口请求
+```python
+# Python解释器
+# 以下是示例代码，需要在您的应用中实现
+# 用来进行测试接口请求
+# Python解释器运行以下代码
+import requests
+post_json_data = {"test":"post json data text"}
+url = "http://127.0.0.1:8400/demo"
+resp = requests.post(url, json=post_json_data)
+resp_json = resp.json()
+{'code': 0,
+ 'message': '请求成功',
+ 'data': {'resp_data_json': {'test': 'post json data text'}}}
 ```
 
 ## 许可证
