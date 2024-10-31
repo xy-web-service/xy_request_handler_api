@@ -37,10 +37,19 @@ pip install xy_request_handler_api
 from xy_request_handler_api.Api import Api
 
 class Demo(Api):
+    def check_xsrf_cookie(self) -> None:
+        return None
 
-    def get(self):
-        self.write("Hello, xy_request_handler_api !")
+    def check_origin(self, _):
+        return False
 
+    def post(self):
+        json_arguments = self.json_arguments
+        self.success()
+        self.data = {
+            "resp_data_json": json_arguments,
+        }
+        self.xy_response()
 ```
 
 
