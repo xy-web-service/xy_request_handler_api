@@ -96,7 +96,7 @@ xy_request_handler_api is licensed under the <Mulan Permissive Software Licenseï
 
 If you think these tools are pretty good, Can you please have a cup of coffee?  
 
-![Pay-Total](./Pay-Total.png)  
+![pay-total](./pay-total.png)  
 
 
 ## Contact
